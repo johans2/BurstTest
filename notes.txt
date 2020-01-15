@@ -1,0 +1,15 @@
+Synchronous compilation
+
+
+No race conditions..
+
+No memory management..need to free memory yourself
+
+IJob
+
+IJobParallelFor
+
+job cant access static members
+
+
+
