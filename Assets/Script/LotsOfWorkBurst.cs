@@ -27,7 +27,7 @@ public class LotsOfWorkBurst : MonoBehaviour
 
     public int arraySize = 10000000;
     private Vector4[] vectors;
-    private Vector4[] newVectors;
+    private Vector4[] calculatedVectors;
 
     private int jobBatchCount = 8;
     private LotsOfWorkJob job;
@@ -35,12 +35,12 @@ public class LotsOfWorkBurst : MonoBehaviour
     private void Awake()
     {
         vectors = new Vector4[arraySize];
-        newVectors = new Vector4[arraySize];
+        calculatedVectors = new Vector4[arraySize];
 
         job = new LotsOfWorkJob
         {
             input = new NativeArray<Vector4>(vectors, Allocator.Persistent),
-            output = new NativeArray<Vector4>(newVectors, Allocator.Persistent)
+            output = new NativeArray<Vector4>(calculatedVectors, Allocator.Persistent)
         };
     }
 
